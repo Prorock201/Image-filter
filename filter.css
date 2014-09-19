@@ -1,0 +1,75 @@
+html {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 16pt;
+    color: #FF6A00;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px black, 5px 2px 5px #002164;
+    background: #B2BCFF;
+}
+
+#original {
+    position: absolute;
+    z-index: -1;
+}
+
+.context {
+    margin: 50px;
+}
+
+.context__image {
+    float: left;
+    margin: 50px;
+}
+
+.context__control {
+    width: 200px;
+    height: 450px;
+    border: 1px solid #000;
+    float: left;
+    border-radius: 18px;
+    background-color: #FFF;
+    margin: 50px;
+    background: linear-gradient(to top left, #C0C0C0, #FFFFFF);
+}
+
+.context__control > div{
+    margin: 15px;
+}
+
+#reset {
+    cursor: pointer;
+    border-radius: 18px;
+    border: 1px solid #000;
+    background: linear-gradient(to top left, #002164, #FFFFFF);
+    line-height: 30px;
+    box-shadow: 5px 2px 5px gray;
+}
+
+.context__upload {
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to top left, #002164, #FFFFFF);
+    border-radius: 18px;
+    border: 1px solid #000;
+    line-height: 30px;
+    box-shadow: 5px 2px 5px gray;
+}
+
+#imageLoader {
+    cursor: pointer;
+    display: block;
+    font-size: 999px;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    border-radius: 18px;
+    background: #808080;
+}

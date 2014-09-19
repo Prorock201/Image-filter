@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image filter</title>
+        <link rel="stylesheet" type="text/css" href="filter.css">
+        <script src="jquery-1.9.0.min.js"></script>
+        <script type="text/javascript" src="filter.js"></script>
+    </head>
+    <body>
+        <div class="context">
+            <div class="context__image">
+                <canvas id="original"></canvas>
+                <canvas id="image"></canvas>
+            </div>
+            <div class="context__control">
+                <div>
+                    <div class="context__control__title">Grayscale</div>
+                    <input type="range" id="r1" min="0" max="10" step="1" value="0">
+                </div>
+                <div>
+                    <div class="context__control__title">Blur</div>
+                    <input type="range" id="r2" min="0" max="10" step="1" value="0">
+                </div>
+                <div>
+                    <div class="context__control__title">Brightness</div>
+                    <input type="range" id="r3" min="-5" max="5" step="1" value="0">
+                </div>
+                <div>
+                    <div class="context__control__title">Noise</div>
+                    <input type="range" id="r4" min="0" max="10" step="1" value="0">
+                </div>
+                <div>
+                    <div class="context__control__title">Median</div>
+                    <input type="range" id="r5" min="0" max="10" step="1">
+                </div>
+                <div>
+                    <div id="reset">Reset</div>
+                </div>
+                <div class="context__upload">Upload image
+                    <input type="file" id="imageLoader">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
