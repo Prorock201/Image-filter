@@ -9,8 +9,8 @@ $(document).ready(function() {
     canvasOrig.width = 700;
     canvasOrig.height = 450;
 
-    drawExample();
-
+    // Future function with default image
+    /*drawExample();
     function drawExample() {
         var img = new Image();
         img.src = 'default.jpg';
@@ -18,11 +18,8 @@ $(document).ready(function() {
         img.onload = function() {
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
             ctxOrig.drawImage(img, 0, 0, canvasOrig.width, canvasOrig.height);
-            /*console.log(canvas.toDataURL());
-            localStorage.setItem('savedImageData', canvas.toDataURL());
-            localStorage.setItem('savedImageDataOrig', canvasOrig.toDataURL());*/
         }
-    }
+    }*/
 
     $('#reset').on('click', function() {
         var img = ctxOrig.getImageData(0, 0, canvasOrig.width, canvasOrig.height);
@@ -96,9 +93,9 @@ $(document).ready(function() {
             ctx.putImageData(imgO, 0, 0);
         }
     });
-    $('#r5').on('change', function (event) {
 
-    });
+    // Future function with median filter
+    /*$('#r5').on('change', function (event) {});*/
 
     $('#imageLoader').on('change', handleImage);
 
@@ -112,12 +109,12 @@ $(document).ready(function() {
                 if (image.width > canvas.width) {
                     image.width = canvas.width = canvasOrig.width;
                 } else {
-                    deltaX = (canvas.width - imgage.width)/2;
+                    deltaX = (canvas.width - image.width)/2;
                 }
                 if (image.height > canvas.height) {
                     image.height = canvas.height = canvasOrig.height;
                 } else {
-                    deltaY = (canvas.height - imgage.height)/2;
+                    deltaY = (canvas.height - image.height)/2;
                 }
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctxOrig.clearRect(0, 0, canvasOrig.width, canvasOrig.height);
